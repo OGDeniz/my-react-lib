@@ -28,17 +28,18 @@ const App: React.FC = () => {
       <Container maxWidth="lg" sx={{ py: 4 }}>
         {/* Theme Toggle Button */}
         <Box display="flex" justifyContent="center" mb={4}>
-          <Button
-            onClick={toggleTheme}
+          <Button sx={{ mb: 2 }} onClick={toggleTheme}
             variant="contained"
-            color={darkMode ? 'secondary' : 'primary'}
+            color="primary"
+            size="large"
+            
           >
             {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
           </Button>
         </Box>
 
         {/* Komponenten: Karten, Icons und andere Inhalte */}
-        <Box display="flex" justifyContent="center" flexDirection="column" gap={4}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <CardEinfach />
           <CardBild />
           <ActiveCard />

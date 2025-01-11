@@ -1,50 +1,51 @@
 import React, { useState } from 'react';
-import 'tailwindcss/tailwind.css';
-import { IconButton, PrimaryButton, SecondaryButton } from '../Buttons';
-import '../../styles/global.module.css';
-//import iconButtons from '../Buttons/iconButtons'; // Removed as it is not used
-
-
+import { AppBar, Toolbar, Typography, IconButton, Button, Menu, MenuItem } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
 
 const MyNavbar: React.FC = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
+  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
   };
 
   return (
-    <nav className="bg-gray-800 p-4 md:flex md:justify-between md:items-center"> 
-      <div className="flex justify-between items-center">
-        <h1 className="text-white text-2xl font-bold">My App</h1>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          My App
+        </Typography>
         <div className="hidden md:flex space-x-4">
-          <IconButton className=" text-white" icon="🏠" onClick={() => alert('Home clicked')} />
-          <PrimaryButton onClick={() => console.log('Primary Button clicked')}>
+          <IconButton color="inherit" onClick={() => alert('Home clicked')}>
+            <HomeIcon />
+          </IconButton>
+          <Button color="inherit" onClick={() => console.log('Primary Button clicked')}>
             Primary Button
-          </PrimaryButton>
-          <SecondaryButton
-            label="Secondary Button"
-            onClick={() => console.log('Secondary Button clicked')}
-          />
+          </Button>
+          <Button color="inherit" onClick={() => console.log('Secondary Button clicked')}>
+            Secondary Button
+          </Button>
         </div>
         <div className="md:hidden">
-          <button onClick={toggleDropdown} className="text-white">
-            {isDropdownOpen ? 'Close' : 'Open'}
-          </button>
+          <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenuOpen}>
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleMenuClose}
+          >
+            <MenuItem onClick={() => console.log('Primary Button clicked')}>Primary Button</MenuItem>
+            <MenuItem onClick={() => console.log('Secondary Button clicked')}>Secondary Button</MenuItem>
+          </Menu>
         </div>
-      </div>
-      {isDropdownOpen && (
-        <div className="md:hidden flex flex-col mt-4 space-y-2">
-          <PrimaryButton onClick={() => console.log('Primary Button clicked')}>
-            Primary Button
-          </PrimaryButton>
-          <SecondaryButton
-            label="Secondary Button"
-            onClick={() => console.log('Secondary Button clicked')}
-          />
-        </div>
-      )}
-    </nav>
+      </Toolbar>
+    </AppBar>
   );
 };
 
