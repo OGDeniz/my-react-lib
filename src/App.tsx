@@ -1,17 +1,17 @@
 import React from 'react';
-import { Button, Container, Box, Icon } from '@mui/material';
-import CardEinfach from './components/UI/Cards/CardEinfach';
-import CardBild from './components/UI/Cards/CardBild';
-import ActiveCard from './components/UI/Cards/ActiveCard';
-import Icons from './components/UI/icons/Icons';
-import StandardImageList from './components/StandardImageList';
-import MyNavbar from './components/UI/nav/Navbar';
-import { ThemeContext } from './context/ThemeContext';
 import { BrowserRouter, Link } from 'react-router-dom';
+import { Breadcrumb } from 'react-bootstrap';
+import { Button, Container, Box, Icon } from '@mui/material';
+import { ThemeContext } from './context/ThemeContext';
+import ActiveCard from './components/UI/Cards/ActiveCard';
 import BasicRating from './components/UI/BasicRating';
 import BasicSelect from './components/BasicSelect';
-import { Breadcrumb } from 'react-bootstrap';
+import CardBild from './components/UI/Cards/CardBild';
+import CardEinfach from './components/UI/Cards/CardEinfach';
 import IconBreadcrumb from './components/UI/IconBreadCrumb';
+import Icons from './components/UI/icons/Icons';
+import MyNavbar from './components/UI/nav/Navbar';
+import StandardImageList from './components/StandardImageList';
 
 const App: React.FC = () => {
   // Dark Mode und Theme-Handling aus dem ThemeContext
