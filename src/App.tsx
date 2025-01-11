@@ -1,13 +1,12 @@
 import React from 'react';
-import './styles/App.css';
+import { Button, Container, Box } from '@mui/material';
 import CardEinfach from './components/UI/Cards/CardEinfach';
 import CardBild from './components/UI/Cards/CardBild';
 import ActiveCard from './components/UI/Cards/ActiveCard';
 import Icons from './components/UI/icons/Icons';
-import { ThemeContext } from './context/ThemeContext';
-import { Button, Container, Box } from '@mui/material';
 import StandardImageList from './components/StandardImageList';
 import MyNavbar from './components/UI/nav/Navbar';
+import { ThemeContext } from './context/ThemeContext';
 
 const App: React.FC = () => {
   // Dark Mode und Theme-Handling aus dem ThemeContext
