@@ -7,7 +7,9 @@ import Icons from './components/UI/icons/Icons';
 import StandardImageList from './components/StandardImageList';
 import MyNavbar from './components/UI/nav/Navbar';
 import { ThemeContext } from './context/ThemeContext';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
+import BasicRating from './components/UI/BasicRating';
+import BasicSelect from './components/BasicSelect';
 
 const App: React.FC = () => {
   // Dark Mode und Theme-Handling aus dem ThemeContext
@@ -42,10 +44,20 @@ const App: React.FC = () => {
           </Button>
         </Box>
 
+        <Container maxWidth="sm" sx={{ py: 4, textAlign: 'center', border: 1, borderColor: 'primary.main', borderRadius: 2 }}>
+          <BasicRating />
+        </Container>
+
+        <Container maxWidth="sm" sx={{  py: 2, textAlign: 'center', border: 1, borderColor: 'primary.main', borderRadius: 2 }}>
+          <BasicSelect />
+        </Container>
+
+
        
 
         {/* Komponenten: Karten, Icons und andere Inhalte */}
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, py: 4, textAlign: 'center' }}>
+          <h2 className="text-center">Einige "Card"-Komponenten</h2>
           <CardEinfach />
           <CardBild />
           <ActiveCard />
