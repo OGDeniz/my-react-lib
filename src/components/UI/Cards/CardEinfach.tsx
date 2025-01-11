@@ -1,15 +1,15 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
+import Box from '@mui/material/Box'; 
+import Card from '@mui/material/Card'; 
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
+import Button from '@mui/material/Button';  
 import Typography from '@mui/material/Typography';
 
 const bull = (
   <Box
     component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)', maxWidth: '33vw', margin: '0 auto' }}
   >
     •
   </Box>
@@ -39,7 +39,7 @@ const card = (
 
 export default function CardEinfach() {
   return (
-    <Box sx={{ minWidth: 275 }}>
+    <Box sx={{ minWidth: 275, maxWidth: '33vw', margin: '0 auto' }}>
       <Card variant="outlined">{card}</Card>
     </Box>
   );
