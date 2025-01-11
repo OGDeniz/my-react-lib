@@ -12,6 +12,10 @@ import { Box } from '@mui/material';
 const CardBild = () => {
     return (
         <div>
+            <h1>Card with Image</h1>
+            <p style={{ border: '2px solid #ccc', padding: '1rem', borderRadius: '8px', boxShadow: '0 2px 3px #ccc', maxWidth: '66vw', margin: '0 auto', top:'1rem' }}>
+                This card component displays an image, a title, and a description. It also includes two buttons for sharing and learning more.
+            </p>
           <Box sx={{ display: 'flex', 
                      justifyContent: 'center', 
                      flexWrap: 'wrap',

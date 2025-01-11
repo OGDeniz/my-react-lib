@@ -19,6 +19,7 @@ import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty';
 export default function SvgMaterialIcons() {
   return (
     <div style={{ margin: '0 auto', padding:"2vh", maxWidth: '33vw'}}>
+    <h2>Material Icons</h2>
     <Grid container sx={{ color: 'text.primary' }}>
       <Grid item xs={4}>
         <Typography>Filled</Typography>

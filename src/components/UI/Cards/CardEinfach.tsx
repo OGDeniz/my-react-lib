@@ -12,12 +12,16 @@ const bull = (
     sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)', maxWidth: '33vw', margin: '0 auto' }}
   >
     •
+   
   </Box>
 );
 
 const card = (
   <React.Fragment>
     <CardContent>
+      <Typography gutterBottom variant="h5" component="div" color='success'>
+        Das ist ein einfacher Karteninhalt
+      </Typography>
       <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit omnis adipisci? Velit, iure molestias. Adipisci alias obcaecati qui atque? Architecto nobis voluptatibus necessitatibus est nesciunt esse, assumenda eligendi possimus.
         Word of the Day
       </Typography>

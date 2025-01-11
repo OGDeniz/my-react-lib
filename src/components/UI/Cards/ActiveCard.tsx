@@ -10,6 +10,8 @@ import cardData from '../../../data/cardData'; // für die Daten der Karte
 function ActiveCard() {
   const [selectedCard, setSelectedCard] = React.useState(0);
   return (
+    <div>
+    <h1>Active Card</h1>
         <Box
       sx={{
         width: '100%',
@@ -49,6 +51,7 @@ function ActiveCard() {
         </Card>
       ))}
     </Box>
+    </div>
   );
 }
 
