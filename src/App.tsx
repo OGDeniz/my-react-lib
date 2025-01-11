@@ -7,6 +7,8 @@ import Icons from './components/UI/icons/Icons';
 import StandardImageList from './components/StandardImageList';
 import MyNavbar from './components/UI/nav/Navbar';
 import { ThemeContext } from './context/ThemeContext';
+import ButtonEmphasis from './components/UI/Buttons/ButtonEphasis';
+import { Link } from 'react-router-dom';
 
 const App: React.FC = () => {
   // Dark Mode und Theme-Handling aus dem ThemeContext
@@ -23,6 +25,9 @@ const App: React.FC = () => {
     >
       {/* Navbar */}
       <MyNavbar />
+      <ButtonEmphasis disabled={false} appBarColor="primary" />
+
+
 
       {/* Container für den Inhalt */}
       <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -32,11 +37,13 @@ const App: React.FC = () => {
             variant="contained"
             color="primary"
             size="large"
-            
+
           >
             {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
           </Button>
         </Box>
+
+       
 
         {/* Komponenten: Karten, Icons und andere Inhalte */}
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
