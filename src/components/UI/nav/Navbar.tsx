@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, IconButton, Button, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -25,9 +25,9 @@ const MyNavbar: React.FC = () => {
           <IconButton color="inherit" onClick={() => alert('Home clicked')}>
             <HomeIcon />
           </IconButton>
-          <Button color="inherit" onClick={() => 
-          <Link to="/login">Login</Link>
-          }>Login</Button>
+            <Button color="inherit" component={Link} to="/pages/buttons">
+            Buttons
+            </Button>
         </div>
         <div className="md:hidden">
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenuOpen}>

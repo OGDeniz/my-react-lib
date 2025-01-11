@@ -7,14 +7,15 @@ import Icons from './components/UI/icons/Icons';
 import StandardImageList from './components/StandardImageList';
 import MyNavbar from './components/UI/nav/Navbar';
 import { ThemeContext } from './context/ThemeContext';
-import ButtonEmphasis from './components/UI/Buttons/ButtonEphasis';
-import { Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 const App: React.FC = () => {
   // Dark Mode und Theme-Handling aus dem ThemeContext
   const { darkMode, toggleTheme } = React.useContext(ThemeContext);
 
   return (
+    // App-Container
+    
     <Box
       className="App"
       sx={{
@@ -25,8 +26,6 @@ const App: React.FC = () => {
     >
       {/* Navbar */}
       <MyNavbar />
-      <ButtonEmphasis disabled={false} appBarColor="primary" />
-
 
 
       {/* Container für den Inhalt */}
@@ -55,6 +54,7 @@ const App: React.FC = () => {
         </Box>
       </Container>
     </Box>
+    
   );
 };
 
