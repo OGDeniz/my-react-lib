@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, IconButton, Button, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 
-const MyNavbar: React.FC = () => {
+const HeaderNavBarNorm: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -45,6 +45,6 @@ const MyNavbar: React.FC = () => {
       </Toolbar>
     </AppBar>
   );
-};
+}
 
-export default MyNavbar;
+export default HeaderNavBarNorm;

@@ -1,6 +1,5 @@
 // src/data/iconButtons.ts
 
-import IconButton from './IconButton';
 
 interface IconButtonProps {
     id: string;

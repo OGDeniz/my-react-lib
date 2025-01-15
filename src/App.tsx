@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
-import { Breadcrumb } from 'react-bootstrap';
-import { Button, Container, Box, Icon } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { Button, Container, Box } from '@mui/material';
 import { ThemeContext } from './context/ThemeContext';
 import ActiveCard from './components/UI/Cards/ActiveCard';
 import BasicRating from './components/UI/BasicRating';
@@ -10,8 +9,9 @@ import CardBild from './components/UI/Cards/CardBild';
 import CardEinfach from './components/UI/Cards/CardEinfach';
 import IconBreadcrumb from './components/UI/IconBreadCrumb';
 import Icons from './components/UI/icons/Icons';
-import MyNavbar from './components/UI/nav/Navbar';
 import StandardImageList from './components/StandardImageList';
+import Navbar from './components/UI/Navbar';
+
 
 const App: React.FC = () => {
   // Dark Mode und Theme-Handling aus dem ThemeContext
@@ -30,13 +30,14 @@ const App: React.FC = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        transition: 'all 0.25s linear'
+        transition: 'all 0.25s linear',
+        fontFamily: 'Roboto, sans-serif',
+        
 
       }}
     >
       {/* Navbar */}
-      <MyNavbar />
-
+      <Navbar />
 
       {/* Container für den Inhalt */}
       <Container maxWidth="lg" sx={{ py: 4 }}>

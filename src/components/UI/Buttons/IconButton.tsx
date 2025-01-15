@@ -1,5 +1,4 @@
 import React from 'react';
-import IconButtonProps from './iconButtons';
 import 'tailwindcss/tailwind.css';
 
 

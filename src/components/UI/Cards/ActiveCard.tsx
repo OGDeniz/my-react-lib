@@ -23,11 +23,11 @@ function ActiveCard() {
  
       }}
     >
-      {cardData.map((card, index) => (
+      {cardData.map((card, cardId, index) => (
         <Card>
           <CardActionArea
-            onClick={() => setSelectedCard(index)}
-            data-active={selectedCard === index ? '' : cardData.length}
+            onClick={() => setSelectedCard(cardId)}
+            data-active={selectedCard === cardId ? '' : cardData.length}
             sx={{
             
               height: '100%',
