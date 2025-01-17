@@ -1,46 +1,98 @@
-# Getting Started with My React Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My React Library
 
-## Available Scripts
+Eine vielseitige React-Komponentenbibliothek, die speziell für die dynamische Darstellung von UI-Elementen entwickelt wurde. Diese Bibliothek nutzt modernste Technologien wie React, Material-UI und TypeScript.
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Dynamische Komponenten**: Anpassbare Kartenkomponenten (`CardBild`, `CardEinfach`).
+- **State-Management**: React Context API für globale Zustände.
+- **Modularität**: Sauber strukturierte Projektarchitektur.
+- **Styling**: Material-UI und CSS-Module für konsistente Designs.
+- **TypeScript-Unterstützung**: Typensicherheit und bessere Code-Wartbarkeit.
 
-Runs the library in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📂 Projektstruktur
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```plaintext
+.
+├── public/
+├── src/
+│   ├── assets/               # Statische Ressourcen (Bilder, etc.)
+│   ├── components/           # Wiederverwendbare UI-Komponenten
+│   │   └── UI/
+│   │       ├── Cards/        # Kartenkomponenten
+│   │           ├── CardEinfach.tsx
+│   │           └── CardBild.tsx
+│   └── context/              # Globale Zustandshandhabung
+│   ├── styles/               # CSS-Stile
+│   └── pages/                # Hauptseiten
+├── package.json              # Projektkonfiguration
+└── README.md                 # Dokumentation
+```
 
-### `npm test`
+## 🔧 Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Repository klonen**:
+   ```bash
+   git clone https://github.com/OGDeniz/my-react-lib.git
+   cd my-react-lib
+   ```
 
-### `npm run build`
+2. **Abhängigkeiten installieren**:
+   ```bash
+   npm install
+   ```
 
-Builds the library for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Entwicklungsserver starten**:
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your library is ready to be deployed!
+## 💡 Verwendung
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Beispiel: CardBild-Komponente
 
-### `npm run eject`
+```javascript
+import CardBild from './components/UI/Cards/CardBild';
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+function App() {
+  const handleShare = () => alert('Geteilt!');
+  const handleLearnMore = () => alert('Mehr erfahren!');
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  return (
+    <CardBild
+      src="https://via.placeholder.com/150"
+      title="Beispielkarte"
+      description="Dies ist eine Beispielkarte mit dynamischem Inhalt."
+      onShare={handleShare}
+      onLearnMore={handleLearnMore}
+    />
+  );
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export default App;
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 📜 Technologien
 
-## Learn More
+- **React**: Frontend-Bibliothek für interaktive Benutzeroberflächen.
+- **Material-UI**: Designsystem für React-Komponenten.
+- **TypeScript**: Typensicheres JavaScript.
+- **CSS Modules**: Lokalisierte Stile für Komponenten.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📈 Roadmap
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ ] Integration von Tests mit Jest.
+- [ ] Erweiterung der Komponentenbibliothek.
+- [ ] Veröffentlichung als npm-Paket.
+
+## 👥 Mitwirken
+
+Beiträge sind willkommen! Öffne ein Issue oder erstelle einen Pull Request.
+
+## 📄 Lizenz
+
+Dieses Projekt ist unter der MIT-Lizenz lizenziert – siehe die Datei LICENSE für Details.
+
+---
+
